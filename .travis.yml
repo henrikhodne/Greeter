@@ -1,0 +1,14 @@
+{
+  "language": "objective-c",
+  "install": [
+    "npm install -g appium",
+    "gem install selenium-webdriver"
+  ],
+  "before_script": [
+    "appium &"
+  ],
+  "script": [
+    "xcodebuild -sdk iphonesimulator6.1",
+    "rspec AppiumTests/Greeter.rb"
+  ]
+}
