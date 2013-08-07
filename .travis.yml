@@ -3,7 +3,7 @@
   "env": {
     "global": [
       "SAUCE_USERNAME=henrikhodne",
-      { "secure": "IEEkN4I0BTm634w6dgCOW2yYWkErwO0k2jWW/PVCsTO1xpatwFS2X2lfBj4+0oUDJ9jj3EVgICI6Z2+VtHs//HwmzO1Q+RsapzaDsghwv8qQb3WGHRpz8L9ENlPoUZIyfPYdS97ti2GEnIZEev8RPsCk5pkdlT/1leGFv9q5QNI=" }
+      { "secure": "EG4MbxELtWMSfgfbeDVmi88xQESupraH17nqAMkccu86lbPz4NbR/W2I/Hsw6hunEDjTFzgPTUQVJK3ty+HF/w6a4wXgZ3t0d8qRHydG0LJ4PySQZcJaiZwL5lVuUjSgdvSAJB+CSpWwL5AOuPpAkBBx01dAXgaAf+B4tsTPky0=" }
     ]
   },
   "install": [
