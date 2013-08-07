@@ -14,7 +14,7 @@ describe "Greeter" do
   end
 
   after :each do
-    job_id = @driver.send(:bridge).session.id
+    job_id = @driver.send(:bridge).session_id
     update_job_success(job_id, example.exception.nil?)
     @driver.quit
   end
