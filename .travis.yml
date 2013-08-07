@@ -1,14 +1,23 @@
 {
   "language": "objective-c",
+  "env": {
+    "global": [
+      "SAUCE_USERNAME=henrikhodne",
+      { "secure": "IEEkN4I0BTm634w6dgCOW2yYWkErwO0k2jWW/PVCsTO1xpatwFS2X2lfBj4+0oUDJ9jj3EVgICI6Z2+VtHs//HwmzO1Q+RsapzaDsghwv8qQb3WGHRpz8L9ENlPoUZIyfPYdS97ti2GEnIZEev8RPsCk5pkdlT/1leGFv9q5QNI=" }
+    ]
+  },
   "install": [
     "npm install -g appium",
-    "gem install selenium-webdriver"
+    "gem install selenium-webdriver",
+    "gem install rspec",
+    "gem install rest-client"
   ],
   "before_script": [
-    "appium &"
+    "xcodebuild -sdk iphonesimulator6.1 TARGETED_DEVICE_FAMILY=1",
+    "zip -r Greeter.app.zip build/Release-iphonesimulator/Greeter.app/",
+  "curl -u $SAUCE_USERNAME:$SAUCE_ACCESS_KEY -X POST \"http://saucelabs.com/rest/v1/storage/$SAUCE_USERNAME/Greeter.app.zip?overwrite=true\" -H \"Content-Type: application/octet-stream\" --data-binary @Greeter.app.zip"
   ],
   "script": [
-    "xcodebuild -sdk iphonesimulator6.1",
     "rspec AppiumTests/Greeter.rb"
   ]
 }
