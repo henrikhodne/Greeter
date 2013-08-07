@@ -7,7 +7,6 @@
     ]
   },
   "install": [
-    "npm install -g appium",
     "gem install selenium-webdriver",
     "gem install rspec",
     "gem install rest-client"
